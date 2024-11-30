@@ -1,7 +1,7 @@
-import * as FakeData from "./utils/FakeData.js";
 
-export function test(){
-    console.log(FakeData.getAccountExamples())
+export function gotoLogin(){
+    console.log("Going to login")
+    window.location.href = "./login/login.html"
 }
 
-window.test = test
+window.gotoLogin = gotoLogin

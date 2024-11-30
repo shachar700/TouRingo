@@ -4,7 +4,7 @@ import {Account, Town, Event_Image, OneTime_Event, Daily_Event, Review, Booking}
 const e_account = [
     new Account("john_doe", "password123"),
     new Account("jane_doe", "securePass456"),
-    new Account("admin_user", "admin@123"),
+    new Account("admin", "admin"),
     new Account("alice123", "alicePwd789"),
     new Account("bob_the_builder", "builder123"),
 ];
@@ -49,7 +49,7 @@ const e_dailyEvent = [
     new Daily_Event(
         3, new Date("2024-06-01"), "456 Market St", "555-5555",
         "City Tour", "10:00", "18:00",
-        "San Francisco", "admin_user", [e_eventImage[3]],
+        "San Francisco", "admin", [e_eventImage[3]],
         [1, 2, 3, 4], "attraction", 100
     ),
     new Daily_Event(
@@ -81,7 +81,7 @@ const e_oneTimeEvent = [
     new OneTime_Event(
         8, new Date("2024-07-04"), "123 Freedom Blvd", "555-7773",
         "Independence Day Fireworks", "20:00", "23:59",
-        "Los Angeles", "admin_user", [e_eventImage[8]], 1000
+        "Los Angeles", "admin", [e_eventImage[8]], 1000
     ),
     new OneTime_Event(
         9, new Date("2024-11-25"), "999 Thanksgiving Rd", "555-7774",
@@ -98,7 +98,7 @@ const e_oneTimeEvent = [
 const e_review = [
     new Review(1, 5, new Date("2024-01-15"), 1, "john_doe"),
     new Review(2, 4, new Date("2024-02-20"), 2, "jane_doe"),
-    new Review(3, 3, new Date("2024-03-05"), 3, "admin_user"),
+    new Review(3, 3, new Date("2024-03-05"), 3, "admin"),
     new Review(4, 5, new Date("2024-04-10"), 4, "alice123"),
     new Review(5, 2, new Date("2024-05-25"), 5, "bob_the_builder"),
 ];
@@ -106,7 +106,7 @@ const e_review = [
 const e_booking = [
     new Booking(1, new Date("2024-01-01"), true, "john_doe", 1),
     new Booking(2, new Date("2024-01-15"), false, "jane_doe", 2),
-    new Booking(3, new Date("2024-02-01"), true, "admin_user", 3),
+    new Booking(3, new Date("2024-02-01"), true, "admin", 3),
     new Booking(4, new Date("2024-02-20"), false, "alice123", 4),
     new Booking(5, new Date("2024-03-01"), true, "bob_the_builder", 5),
 ];
