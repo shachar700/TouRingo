@@ -4,4 +4,4 @@ export function gotoLogin(){
     window.location.href = "./login/login.html"
 }
 
-window.gotoLogin = gotoLogin
+//window.gotoLogin = gotoLogin
