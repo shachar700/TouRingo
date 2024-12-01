@@ -11,11 +11,6 @@ function gotoLogin(){
     window.location.href = "./login/login.html"
 }
 
-function gotoRepo(){
-    console.log("Going to repo")
-    window.location.href = "https://github.com/ShlomiFridman/WebProject2025/tree/prototype"
-}
-
 function gotoHome(){
     console.log("Going to home")
     window.location.href = "./home/home.html"
@@ -57,6 +52,11 @@ const toggleMenu = (hide) => {
         document.querySelectorAll('svg')[1].classList.add('hidden')
     }
 }
+
+function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    dropdown.classList.toggle('hidden');
+  }
 
 const renderHome = () => {
     temp_text_id.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Home</div>'
