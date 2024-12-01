@@ -39,12 +39,11 @@
             <div
                 class="absolute top-[56px] left-0 bg-blue-300 p-3 hidden w-full"
                 id="ddMenu"
-            >
+            >               
                 <button
                     class="block py-1 px-2"
-                    onclick="setView('Home')"
-                >
-                    Home
+                    onclick="setView('Home')">
+                    HomeSetView
                 </button>
                 <button
                     class="block py-1 px-2"
@@ -60,30 +59,33 @@
                 </button>
             </div>
             <div class="justify-start gap-4 hidden sm:flex">
-                <button onclick="setView('Home')">Home</button>
-                <button onclick="setView('Attractions')">Attractions</button>
-                <button onclick="setView('Contact')">Contact</button>
+                <button onclick="gotoHome()">
+                    HomeExternalPage
+                   </button>
+                <button onclick="setView('Home')">HomeSetView</button>
+                <button onclick="setView('Attractions')">AttractionsSetView</button>
+                <button onclick="setView('Contact')">ContactSetView</button>
             </div>
-            <div>
+            <div class="justify-end gap-4 hidden sm:flex">
                 <button class="dark:hidden block" onclick="toggle()">
                     Dark
                 </button>
                 <button class="hidden dark:block" onclick="toggle()">
                     Light
                 </button>
-            </div>
-            <div>
+                <button onclick="gotoRepo()">
+                    Repo
+                </button>
                 <button onclick="gotoLogin()">
                     Logout
                 </button>
-            </div>
-            
+            </div>     
         </div>
         <div class="py-4">
             <h1 class="text-3xl border-b-[10px] border-blue-300 pb-4">
                 Home
             </h1>
-            <div id="app" class="w-full bg-blue-100 p-2"></div>                
+            <div id="temp_text_id" class="w-full bg-blue-100 p-2"></div>                
         </div>
     </div>
 </body>

@@ -11,6 +11,27 @@ function gotoLogin(){
     window.location.href = "./login/login.html"
 }
 
+function gotoRepo(){
+    console.log("Going to repo")
+    window.location.href = "https://github.com/ShlomiFridman/WebProject2025/tree/prototype"
+}
+
+function gotoHome(){
+    console.log("Going to home")
+    window.location.href = "./home/home.html"
+}
+
+/*
+function gotoAttractions(){
+    console.log("Going to attractions")
+    window.location.href = "./atrractions/atrractions.html"
+}
+
+function gotoSpecificAttraction(){
+    console.log("Going to specific attraction")
+    window.location.href = "./specific_attraction/specific_attraction.html"
+}*/
+
 const setView = (v) => {
     header.innerText = v
     toggleMenu(true)
@@ -38,15 +59,15 @@ const toggleMenu = (hide) => {
 }
 
 const renderHome = () => {
-    app.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Home</div>'
+    temp_text_id.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Home</div>'
 }
 
 const renderAbout = () => {
-    app.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Attractions</div>'
+    temp_text_id.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Attractions</div>'
 }
 
 const renderContact = () => {
-    app.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Contact</div>'
+    temp_text_id.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Contact</div>'
 }
 
 const renderMenu = () => {
