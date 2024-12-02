@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LocalAttractions</title>
     <base href=".">
     <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./styles/main.css" type="text/css" />
     <script type="module" src="./main.js"></script>
 </head>
-<body onload="gotoLogin()">
-    <button onclick="test()">test 2</button>
+
+<body>
+    <div id="app">
+        <div class="sidebar">
+            <h2>To be added</h2>
+        </div>
+        <div id="site" class="content dark:bg-gradient-to-b h-screen dark:from-gray-800 dark:to-gray-600 dark:text-white">
+            <div class="row">
+                <div class="col-8">
+                    <h1>Name of site</h1>
+                    <div class="btnToggle">
+                        <button class="dark:hidden block" onclick="toggle()">
+                            Dark
+                        </button>
+                        <button class="hidden dark:block" onclick="toggle()">
+                            Light
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    making temple here 1
+                </div>
+                <div class="col">
+                    making temple here 2
+                </div>
+                <div class="col">
+                    making temple here 2
+                </div>
+                <div class="col">
+                    make sure to create those cols in the javaScript
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
