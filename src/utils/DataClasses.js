@@ -33,6 +33,30 @@ export class WP_Event{
         this.creatorUsername = creatorUsername;
         this.images = images;
     }
+
+    buildElement(){
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'row'; // Add a class for styling purposes
+
+        const htmlContent = `
+            <div class="cell id">${this.id}</div>
+            <div class="cell date">${this.date}</div>
+            <div class="cell address">${this.address}</div>
+            <div class="cell phone">${this.phone}</div>
+            <div class="cell description">${this.description}</div>
+            <div class="cell openingTime">${this.openingTime}</div>
+            <div class="cell closingTime">${this.closingTime}</div>
+            <div class="cell townName">${this.townName}</div>
+            <div class="cell creatorUsername">${this.creatorUsername}</div>
+            <div class="cell images">
+                ${this.images.map(img => `<img src="${img}" alt="Image" class="image-thumbnail">`).join('')}
+            </div>
+        `;
+
+        rowDiv.innerHTML = htmlContent;
+
+        return rowDiv;
+    }
 }
 
 export class Daily_Event extends WP_Event{
@@ -46,6 +70,16 @@ export class Daily_Event extends WP_Event{
             this.type = type;
             this.maxPossibleBookingperDay = maxPossibleBookingperDay;
         }
+
+    buildElement(){
+        const rowDiv = super.buildElement();
+        rowDiv.innerHTML += `
+            <div class="cell openDays">${this.openDays.toString()}</div>
+            <div class="cell eventType">${this.type.toString()}</div>
+            <div class="cell maxPossibleBookings">${this.maxPossibleBookingperDay.toString()}</div>
+        `;
+        return rowDiv;
+    }
 }
 
 export class OneTime_Event extends WP_Event{
@@ -56,6 +90,14 @@ export class OneTime_Event extends WP_Event{
                 openingTime, closingTime, townName, creatorUsername, images);
             this.maxPossibleBookingper = maxPossibleBookingper;
         }
+        
+    buildElement(){
+        const rowDiv = super.buildElement();
+        rowDiv.innerHTML += `
+            <div class="cell maxPossibleBookings">${this.maxPossibleBookingper.toString()}</div>
+        `;
+        return rowDiv;
+    }
 }
 
 export class Event_Image {
