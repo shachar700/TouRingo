@@ -4,16 +4,24 @@ const ddMenu = document.querySelector('#ddMenu')
 const sandwitch = document.querySelectorAll('svg')
 const html = document.documentElement
 
-const toggle = () => html.classList.toggle('dark')
+const toggle = () => {
+    html.classList.toggle('dark')
+    window.parent.document.documentElement.classList.toggle('dark')
+}
 
 function gotoLogin(){
     console.log("Going to login")
-    window.location.href = "./login/login.html"
+    window.top.location.href = "../login/login.html"
+}
+
+function gotoProfile(){
+    console.log("Going to home")
+    window.top.location.href  = "../userProfile/profile.html"
 }
 
 function gotoHome(){
     console.log("Going to home")
-    window.location.href = "./home/home.html"
+    window.top.location.href  = "../home/home.html"
 }
 
 /*
@@ -58,17 +66,17 @@ function toggleDropdown() {
     dropdown.classList.toggle('hidden');
   }
 
-const renderHome = () => {
-    temp_text_id.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Home</div>'
-}
+// const renderHome = () => {
+//     temp_text_id.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Home</div>'
+// }
 
-const renderAbout = () => {
-    temp_text_id.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Attractions</div>'
-}
+// const renderAbout = () => {
+//     temp_text_id.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Attractions</div>'
+// }
 
-const renderContact = () => {
-    temp_text_id.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Contact</div>'
-}
+// const renderContact = () => {
+//     temp_text_id.innerHTML = '<div class="p-4 h-[200px] flex items-center justify-center">Temp for Contact</div>'
+// }
 
 const renderMenu = () => {
     // to do
@@ -78,6 +86,6 @@ const renderThemeToggle = () => {
     // to do
 }
 
-renderMenu()
-renderThemeToggle()
-renderHome()
+// renderMenu()
+// renderThemeToggle()
+// renderHome()
