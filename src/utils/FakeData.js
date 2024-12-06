@@ -33,6 +33,9 @@ const e_eventImage = [
 
 
 // Example Daily_Event instances
+/*var nowDate = new Date(); 
+var date = nowDate.getFullYear()+'/'+(nowDate.getMonth()+1)+'/'+nowDate.getDate();*/
+
 const e_dailyEvent = [
     new Daily_Event(
         1, new Date("2024-01-02"), "123 Apple St", "555-2222",
