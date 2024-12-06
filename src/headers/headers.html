@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../output.css">
     <script src="./headers.js" defer></script>
 </head>
-<body class="dark:bg-gray-700 dark:text-white p-4">
+<body class="dark:bg-gray-700 dark:text-white p-4 overflow-y-hidden">
     <div class="max-w-[1000px] w-full mx-auto relative">
         <div
             class="bg-blue-400 dark:bg-blue-500 p-4 flex justify-between"
@@ -43,29 +43,29 @@
             >               
                 <button
                     class="block py-1 px-2"
-                    onclick="setView('Home')">
+                    onclick="gotoHome()">
                     HomeSetView
                 </button>
-                <button
+                <!-- <button
                     class="block py-1 px-2"
                     onclick="setView('Attractions')"
                 >
                 Attractions
-                </button>
-                <button
+                </button> -->
+                <!-- <button
                     class="block py-1 px-2"
                     onclick="setView('Contact')"
                 >
                     Contact
-                </button>
+                </button> -->
             </div>
             <div class="justify-start gap-4 hidden sm:flex">
                 <button onclick="gotoHome()">
                     HomePage
                    </button>
-                <button onclick="setView('Home')">HomeSetView</button>
+                <!-- <button onclick="setView('Home')">HomeSetView</button>
                 <button onclick="setView('Attractions')">AttractionsSetView</button>
-                <button onclick="setView('Contact')">ContactSetView</button>
+                <button onclick="setView('Contact')">ContactSetView</button> -->
             </div>
             <div class="justify-end gap-4 hidden sm:flex">
                 <button class="dark:hidden block" onclick="toggle()">
@@ -118,7 +118,7 @@
                       <div class="py-1" role="none">
                         <!-- Profile Page Option -->
                         <a
-                          href="../userProfile/profile.html"
+                          onclick="gotoProfile()"
                           class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
                           role="menuitem"
                           tabindex="-1"
@@ -127,7 +127,7 @@
                         </a>
                         <!-- Log Out Option -->
                         <a
-                          href="../login/login.html"
+                          onclick="gotoLogin()"
                           class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
                           role="menuitem"
                           tabindex="-1"

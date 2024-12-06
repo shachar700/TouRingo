@@ -19,20 +19,23 @@ const e_town = [
 
 // Example Event_Image instances
 const e_eventImage = [
-    new Event_Image(1, "Main Event", "assets\\images\\mainEvent.jpeg", 1),
-    new Event_Image(2, "Side Event", "assets\\images\\sideEvent.jpeg", 1),
-    new Event_Image(3, "Workshop Image", "assets\\images\\workshop.jpg", 2),
-    new Event_Image(4, "City Tour Photo", "assets\\images\\cityTour.jpg", 3),
-    new Event_Image(5, "Holiday Fair Poster", "assets\\images\\holidayFair.jpg", 5),
-    new Event_Image(6, "Exhibition Booth", "assets\\images\\booth.jpg" , 6),
-    new Event_Image(7, "Concert Poster", "assets\\images\\concertPoster.jpg", 7),
-    new Event_Image(8, "VIP Access", "assets\\images\\vip.jpg", 8),
-    new Event_Image(9, "Evening Gala", "assets\\images\\gala.jpg", 9),
-    new Event_Image(10, "Event Speaker", "assets\\images\\speaker.png", 10),
+    new Event_Image(1, "Main Event", "..\\..\\assets\\images\\mainEvent.jpeg", 1),
+    new Event_Image(2, "Side Event", "..\\..\\assets\\images\\sideEvent.jpeg", 1),
+    new Event_Image(3, "Workshop Image", "..\\..\\assets\\images\\workshop.jpg", 2),
+    new Event_Image(4, "City Tour Photo", "..\\..\\assets\\images\\cityTour.jpg", 3),
+    new Event_Image(5, "Holiday Fair Poster", "..\\..\\assets\\images\\holidayFair.jpg", 5),
+    new Event_Image(6, "Exhibition Booth", "..\\..\\assets\\images\\booth.jpg" , 6),
+    new Event_Image(7, "Concert Poster", "..\\..\\assets\\images\\concertPoster.jpg", 7),
+    new Event_Image(8, "VIP Access", "..\\..\\assets\\images\\vip.jpg", 8),
+    new Event_Image(9, "Evening Gala", "..\\..\\assets\\images\\gala.jpg", 9),
+    new Event_Image(10, "Event Speaker", "..\\..\\assets\\images\\speaker.png", 10),
 ];
 
 
 // Example Daily_Event instances
+/*var nowDate = new Date(); 
+var date = nowDate.getFullYear()+'/'+(nowDate.getMonth()+1)+'/'+nowDate.getDate();*/
+
 const e_dailyEvent = [
     new Daily_Event(
         1, new Date("2024-01-02"), "123 Apple St", "555-2222",
@@ -62,7 +65,7 @@ const e_dailyEvent = [
         5, new Date("2024-12-25"), "555 Holiday Dr", "555-6666",
         "Holiday Fair", "12:00", "22:00",
         "Seattle", "bob_the_builder", [e_eventImage[5]],
-        [0, 1, 2, 6], "restaurant", 300
+        [1, 2, 3, 7], "restaurant", 300
     ),
 ];
 
