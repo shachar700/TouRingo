@@ -15,13 +15,18 @@ function gotoLogin(){
 }
 
 function gotoProfile(){
-    console.log("Going to home")
+    console.log("Going to profile")
     window.top.location.href  = "../userProfile/profile.html"
 }
 
 function gotoHome(){
     console.log("Going to home")
     window.top.location.href  = "../home/home.html"
+}
+
+function gotoRepo(){
+    console.log("Going to repo")
+    window.top.location.href  = "https://github.com/ShlomiFridman/WebProject2025/tree/prototype"
 }
 
 /*
